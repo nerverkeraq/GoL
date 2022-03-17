@@ -1,4 +1,3 @@
-import Himnhatk from "./Himnhatk";
 
 class Grass extends Himnhatk{
     constructor(x, y) {
