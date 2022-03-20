@@ -1,4 +1,4 @@
-class Himnhatk {
+module.exports = class Himnhatk {
     constructor(x,y){
         this.x = x;
         this.y = y;
@@ -34,4 +34,3 @@ class Himnhatk {
         return found;
     }
 }
-export default Himnhatk;

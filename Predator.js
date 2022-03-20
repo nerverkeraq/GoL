@@ -1,4 +1,6 @@
-class Predator extends Himnhatk{
+let Himnhatk = require('./Himnhatk')
+
+module.exports = class Predator extends Himnhatk{
     constructor(x, y) {
         super(x,y,directions);
         this.multiply = 0;
@@ -7,7 +9,7 @@ class Predator extends Himnhatk{
     move() {
 
         var fundCords = this.getDirections(0);
-        var cord = random(fundCords);
+        var cord = fundCords[Math.floor(Math.random() * fundCords.length)]
         if (cord) {
             var x = cord[0];
             var y = cord[1];

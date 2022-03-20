@@ -1,5 +1,6 @@
+let Himnhatk = require('./Himnhatk')
 
-class Grass extends Himnhatk{
+module.exports = class Grass extends Himnhatk{
     constructor(x, y) {
         super(x,y,directions)
         this.multiply = 0; //բազմացման գործակից
@@ -11,7 +12,7 @@ class Grass extends Himnhatk{
         if (this.multiply == 2) {
             //Հետազոտում է շրջապատը, որոնում դատարկ տարածքներ
             var fundCords = this.getDirections(0);
-            var cord = random(fundCords);
+            var cord = fundCords[Math.floor(Math.random() * fundCords.length)]
             if (cord) {
                 var x = cord[0];
                 var y = cord[1];
@@ -27,4 +28,3 @@ class Grass extends Himnhatk{
         }
     }
 }
-export default Grass;

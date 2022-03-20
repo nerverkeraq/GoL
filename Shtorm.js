@@ -1,6 +1,6 @@
+let Himnhatk = require('./Himnhatk')
 
-
-class Shtorm extends Himnhatk{
+module.exports = class Shtorm extends Himnhatk{
     constructor(x, y) {
         super(x, y, directions);
         this.energy = 3;

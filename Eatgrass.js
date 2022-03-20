@@ -1,4 +1,6 @@
-class Eatgrass extends Himnhatk {
+let Himnhatk = require('./Himnhatk') 
+
+module.exports = class Eatgrass extends Himnhatk {
     constructor(x, y) {
         super(x,y,directions);
         this.multiply = 0;
@@ -8,7 +10,7 @@ class Eatgrass extends Himnhatk {
     move() {
         //որոնում է դատարկ տարածքներ
         var fundCords = this.getDirections(0);
-        var cord = random(fundCords);
+        var cord = fundCords[Math.floor(Math.random() * fundCords.length)]
 
         if (cord) {
             var x = cord[0];
