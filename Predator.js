@@ -1,4 +1,4 @@
-class Predator {
+class Predator extends Himnhatk{
     constructor(x, y) {
         super(x,y,directions);
         this.multiply = 0;

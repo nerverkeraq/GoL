@@ -4,9 +4,6 @@ class Eatgrass extends Himnhatk {
         this.multiply = 0;
         this.energy = 3;
     }
-
-
-
     //move() շարժվել
     move() {
         //որոնում է դատարկ տարածքներ

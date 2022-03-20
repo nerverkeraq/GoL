@@ -1,0 +1,22 @@
+{
+  "name": "gol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Eatgrass.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerverkeraq/GoL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nerverkeraq/GoL/issues"
+  },
+  "homepage": "https://github.com/nerverkeraq/GoL#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
