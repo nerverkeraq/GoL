@@ -1,8 +1,9 @@
-var express = require('express')
+var express = require('express');
 var app = express();
-var server = require('http').Server(app)
-var io = require ('socket.io')(server);
-var fs = require("fs")
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+var fs = require("fs");
+const Eatgrass = require('./Eatgrass');
 
 app.use(express.static("."));
 app.get("/", function (req,res) {
@@ -45,7 +46,7 @@ var shtormArr = [];
 var shtormbrArr = [];
 
 Grass = require('./Grass')
-GrassEater = require("./Eatgrass")
+Eatgrass = require("./Eatgrass")
 Predator = require("./Predator")
 Shtorm = require("./Shtorm")
 Shtormbr = require("./Shtormbr")

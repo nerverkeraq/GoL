@@ -1,4 +1,4 @@
-let Himnhatk = require('./Himnhatk')
+let Himnhatk = require('./Himnhatk.js')
 
 module.exports = class Grass extends Himnhatk{
     constructor(x, y) {
