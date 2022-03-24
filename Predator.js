@@ -2,7 +2,7 @@ let Himnhatk = require('./Himnhatk')
 
 module.exports = class Predator extends Himnhatk{
     constructor(x, y) {
-        super(x,y,directions);
+        super(x,y);
         this.multiply = 0;
         this.energy = 5;
     }
@@ -27,7 +27,7 @@ module.exports = class Predator extends Himnhatk{
 
     eat() {
         var fundCords = this.getDirections(2);
-        var cord = random(fundCords);
+        var cord = fundCords[Math.floor(Math.random() * fundCords.length)]
 
         if (cord) {
             var x = cord[0];

@@ -2,7 +2,7 @@ let Himnhatk = require('./Himnhatk')
 
 module.exports = class Eatgrass extends Himnhatk {
     constructor(x, y) {
-        super(x,y,directions);
+        super(x,y);
         this.multiply = 0;
         this.energy = 3;
     }
@@ -31,7 +31,7 @@ module.exports = class Eatgrass extends Himnhatk {
     eat() {
         //հետազոտում է շրջակայքը, որոնում է սնունդ
         var fundCords = this.getDirections(1);
-        var cord = random(fundCords);
+        var cord = fundCords[Math.floor(Math.random() * fundCords.length)]
 
         //եթե կա հարմար սնունդ
         if (cord) {
@@ -83,7 +83,7 @@ module.exports = class Eatgrass extends Himnhatk {
     mul() {
         //փնտրում է դատարկ տարածք
         var fundCords = this.getDirections(0);
-        var cord = random(fundCords);
+        var cord = fundCords[Math.floor(Math.random() * fundCords.length)]
 
         //եթե կա բազմանում է
         if (cord) {

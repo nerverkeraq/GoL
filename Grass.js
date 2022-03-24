@@ -2,7 +2,7 @@ let Himnhatk = require('./Himnhatk.js')
 
 module.exports = class Grass extends Himnhatk{
     constructor(x, y) {
-        super(x,y,directions)
+        super(x,y)
         this.multiply = 0; //բազմացման գործակից
     }
 

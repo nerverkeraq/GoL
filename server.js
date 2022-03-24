@@ -3,13 +3,16 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var fs = require("fs");
-const Eatgrass = require('./Eatgrass');
-
 app.use(express.static("."));
 app.get("/", function (req,res) {
     res.redirect('index.html')
 })
 server.listen(3000);
+Grass = require('./Grass')
+Eatgrass = require("./Eatgrass.js")
+Predator = require("./Predator")
+Shtorm = require("./Shtorm")
+Shtormbr = require("./Shtormbr")
 
 matrix = [];
 rows = 25; // Տողերի քանակ
@@ -39,17 +42,13 @@ for (let y = 0; y < rows; y++) {
     }
 }
 io.sockets.emit('send matrix', matrix)
-var eatArr = [];
-var grassArr = [];
-var predatorArr = [];
-var shtormArr = [];
-var shtormbrArr = [];
+ eatArr = [];
+ grassArr = [];
+ predatorArr = [];
+ shtormArr = [];
+ shtormbrArr = [];
 
-Grass = require('./Grass')
-Eatgrass = require("./Eatgrass")
-Predator = require("./Predator")
-Shtorm = require("./Shtorm")
-Shtormbr = require("./Shtormbr")
+
 
 function createObject (matrix) {
     for (var y = 0; y < matrix.length; y++) {
@@ -76,7 +75,7 @@ function createObject (matrix) {
             }
         }  
     }
-    io.socket.emit('send matrix', matrix)  
+    io.sockets.emit('send matrix', matrix)  
 
 }
 

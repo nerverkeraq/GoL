@@ -4,7 +4,7 @@ side = 30
 
 function setup() {
     frameRate(50)
-    createCanvas(7 * side, 14 * side)
+    createCanvas(25 * side, 25 * side)
     background('#acacac');
 }
 
@@ -37,3 +37,8 @@ function nkarvox(matrix){
 setInterval(function () {
     socket.on('send matrix', nkarvox)
 },1000)
+
+let kill = document.getElementById('kill')
+kill.addEventListener('click', () => {
+    socket.emit("kill")
+})

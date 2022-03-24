@@ -2,7 +2,7 @@ let Himnhatk = require('./Himnhatk')
 
 module.exports = class Shtormbr extends Himnhatk{
     constructor(x, y) {
-        super(x,y,directions);
+        super(x,y);
         this.multiply = 0;
         this.energy = 5;
     }
@@ -27,8 +27,7 @@ module.exports = class Shtormbr extends Himnhatk{
     }
     eat() {
         var fundCords = this.getDirections(3);
-        var cord = random(fundCords);
-
+        var cord = fundCords[Math.floor(Math.random() * fundCords.length)]
         if (cord) {
             var x = cord[0];
             var y = cord[1];
@@ -71,8 +70,7 @@ module.exports = class Shtormbr extends Himnhatk{
     mul() {
 
         var fundCords = this.getDirections(0);
-        var cord = random(fundCords);
-
+        var cord = fundCords[Math.floor(Math.random() * fundCords.length)]
         if (cord) {
             var x = cord[0];
             var y = cord[1];

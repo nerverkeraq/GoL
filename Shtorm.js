@@ -2,7 +2,7 @@ let Himnhatk = require('./Himnhatk')
 
 module.exports = class Shtorm extends Himnhatk{
     constructor(x, y) {
-        super(x, y, directions);
+        super(x, y);
         this.energy = 3;
     }
     draw() {
@@ -37,7 +37,6 @@ module.exports = class Shtorm extends Himnhatk{
         for (var i in shtormArr) {
             if (this.x == shtormArr[i].x && this.y == shtormArr[i].y) {
                 shtormArr.splice(i, 1);
-
             }
         }
     }
