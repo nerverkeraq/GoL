@@ -46,6 +46,7 @@ module.exports = class Shtormbr extends Himnhatk{
                 if (x == predatorArr[i].x && y == predatorArr[i].y) {
                     predatorArr.splice(i, 1);
                 }
+                break;
             }
         }
 
@@ -96,6 +97,7 @@ module.exports = class Shtormbr extends Himnhatk{
                 if (this.x == shtormbrArr[i].x && this.y == shtormbrArr[i].y) {
                     shtormbrArr.splice(i, 1);
                 }
+                break;
             }
         }
     }

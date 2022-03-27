@@ -47,6 +47,7 @@ module.exports = class Predator extends Himnhatk{
                 if (x == eatArr[i].x && y == eatArr[i].y) {
                     eatArr.splice(i, 1);
                 }
+                break;
             }
         } else {
             this.move();
@@ -84,6 +85,7 @@ module.exports = class Predator extends Himnhatk{
             if (this.x == predatorArr[i].x && this.y == predatorArr[i].y) {
                 predatorArr.splice(i, 1);
             }
+            break;
         }
     }
 }

@@ -38,6 +38,7 @@ module.exports = class Shtorm extends Himnhatk{
             if (this.x == shtormArr[i].x && this.y == shtormArr[i].y) {
                 shtormArr.splice(i, 1);
             }
+            break;
         }
     }
 }

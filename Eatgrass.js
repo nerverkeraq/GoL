@@ -58,8 +58,13 @@ module.exports = class Eatgrass extends Himnhatk {
             //խոտակերի համար դա խոտն է, խոտերի զանգվածի մեջ xotArr
             for (var i in grassArr) {
                 if (x == grassArr[i].x && y == grassArr[i].y) {
+                    console.log('true');
+                    
                     grassArr.splice(i, 1);
+                    console.log(grassArr);
+                    
                 }
+                break;
             }
 
             //եթե պատրաստ է բազմացմանը, բազմանում է 
@@ -111,6 +116,7 @@ module.exports = class Eatgrass extends Himnhatk {
             if (this.x == eatArr[i].x && this.y == eatArr[i].y) {
                 eatArr.splice(i, 1);
             }
+            break;
         }
     }
 

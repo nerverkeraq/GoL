@@ -4,7 +4,7 @@ side = 30
 
 function setup() {
     frameRate(50)
-    createCanvas(25 * side, 25 * side)
+    createCanvas(5 * side, 5 * side)
     background('#acacac');
 }
 
@@ -38,7 +38,19 @@ setInterval(function () {
     socket.on('send matrix', nkarvox)
 },1000)
 
-let kill = document.getElementById('kill')
+let kill = document.querySelector('#kill');
 kill.addEventListener('click', () => {
     socket.emit("kill")
+})
+let reanimate = document.getElementById('reanimate')
+reanimate.addEventListener('click', () => {
+    socket.emit("reanimate")
+})
+let realGoL = document.getElementById('realGoL')
+reanimate.addEventListener('click', () => {
+    socket.emit("realGoL")
+})
+let resizebig = document.getElementById('resizebig')
+reanimate.addEventListener('click', () => {
+    socket.emit("resizebig")
 })
