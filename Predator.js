@@ -74,6 +74,18 @@ module.exports = class Predator extends Himnhatk{
             matrix[y][x] = 2;
             this.multiply = 0;
         }
+        if (weath == "winter") {
+			this.energy -= 3;
+			this.multiply -= 3;
+		}
+		if (weath == "summer") {
+			this.energy -= 1;
+			this.multiply -= 1;
+        }
+        if (weath == "spring") {
+			this.energy += 2;
+			this.multiply += 2;
+		}
     }
 
 

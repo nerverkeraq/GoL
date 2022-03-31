@@ -9,11 +9,12 @@ app.get("/", function (req, res) {
 })
 server.listen(3000);
 Grass = require('./Grass')
-Eatgrass = require("./Eatgrass.js")
+Eatgrass = require("./Eatgrass")
 Predator = require("./Predator")
 Shtorm = require("./Shtorm")
 Shtormbr = require("./Shtormbr")
 
+weath = "winter";
 rows = 5; // Տողերի քանակ
 columns = 5
 function generateMatrix() {
@@ -97,11 +98,15 @@ function game() {
     }
 
     for (var i in shtormArr) {
-        shtormArr[i].draw();
+        if(weath !== "winter" ){
+            shtormArr[i].draw();
+        }
     }
 
     for (var i in shtormbrArr) {
-        shtormbrArr[i].eat();
+        if(weath !== "winter" ){
+            shtormbrArr[i].eat();
+        }
     }
     io.sockets.emit("send matrix", matrix);
 }
@@ -121,6 +126,23 @@ function kill() {
     }
     io.sockets.emit("send matrix", matrix);
 }
+
+function weather() {
+    if (weath == "winter") {
+        weath = "spring"
+    }
+    else if (weath == "spring") {
+        weath = "summer"
+    }
+    else if (weath == "summer") {
+        weath = "autumn"
+    }
+    else if (weath == "autumn") {
+        weath = "winter"
+    }
+    io.sockets.emit('weather', weath)
+}
+setInterval(weather, 5000);
 
 function reanimate() {
     console.log('reanimate')

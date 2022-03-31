@@ -58,11 +58,7 @@ module.exports = class Eatgrass extends Himnhatk {
             //խոտակերի համար դա խոտն է, խոտերի զանգվածի մեջ xotArr
             for (var i in grassArr) {
                 if (x == grassArr[i].x && y == grassArr[i].y) {
-                    console.log('true');
-                    
-                    grassArr.splice(i, 1);
-                    console.log(grassArr);
-                    
+                    grassArr.splice(i, 1)                    
                 }
                 break;
             }
@@ -78,7 +74,7 @@ module.exports = class Eatgrass extends Himnhatk {
             //եթե չկա հարմար սնունդ 
             this.move();
             this.energy--;
-            if (this.energy <= 0) { //մահանում է, եթե էներգիան 3֊ից ցածր է
+            if (this.energy <= 3) { //մահանում է, եթե էներգիան 3֊ից ցածր է
                 this.die();
             }
         }
@@ -102,7 +98,23 @@ module.exports = class Eatgrass extends Himnhatk {
 
             //հիմնական matrix-ում կատարում է գրառում նոր խոտի մասին
             matrix[y][x] = 2;
-            // this.multiply = 0; //????????
+            this.multiply = 0; 
+        }
+        if (weath == "winter") {
+			this.energy -= 4;
+			this.multiply -= 4;
+		}
+		if (weath == "summer") {
+			this.energy += 2;
+			this.multiply += 2;
+        }
+        if (weath == "spring") {
+            this.energy += 1;
+			this.multiply += 1;
+        }
+        if (weath == "autumn") {
+            this.energy -= 2;
+			this.multiply -= 2;
         }
     }
 
