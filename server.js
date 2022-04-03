@@ -149,21 +149,12 @@ function reanimate() {
     createObject(generateMatrix());
 }
 
-function realGol() {
-
-}
-
-function resizebig() {
-
-}
 
 
 io.on('connection', function (socket) {
     createObject(matrix);
     socket.on("kill", kill);
     socket.on("reanimate", reanimate);
-    socket.on("realGol", realGol);
-    socket.on("resizebig", resizebig)
 })
 
 var statistics = {};

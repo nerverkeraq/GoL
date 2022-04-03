@@ -74,11 +74,4 @@ let reanimate = document.getElementById('reanimate')
 reanimate.addEventListener('click', () => {
     socket.emit("reanimate")
 })
-let realGoL = document.getElementById('realGoL')
-reanimate.addEventListener('click', () => {
-    socket.emit("realGoL")
-})
-let resizebig = document.getElementById('resizebig')
-reanimate.addEventListener('click', () => {
-    socket.emit("resizebig")
-})
+
